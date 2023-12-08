@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var btnResultado = document.getElementById("resultado");
     var btnLimparTela = document.getElementById("limparTela");
     var btnApagarAnterior = document.getElementById("apagarAnterior");
+    var btnConver = document.getElementById("convertir");
 
     listenerBtn.push(document.getElementById("ponto"));
 
@@ -38,6 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     btnResultado.onclick = function () {
         verificarResulatado();
     }
+
+    btnConver.onclick = function () {
+        celsiusAFahrenheit();
+    }
+
+    function celsiusAFahrenheit() {
+        tela.value = (tela.value * 9/5) + 32;
+      }
 
     function verificarResulatado() {
         try {
@@ -102,5 +111,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 return false;
         }
     }
-
+   
 });
